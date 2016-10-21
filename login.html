@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户登录-触屏版</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/account.css" rel="stylesheet" type="text/css">
+    <script src="scripts/jquery.js" type="text/javascript"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+    <script src="scripts/account.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="new-header">
+            <a href="javascript:pageBack()" class="new-a-back"><span>返回</span></a>
+            <h2>分类列表</h2>
+        </div>
+    </header>
+    <div class="loginTable">
+        <form name="loginForm" action="">
+            <div class="itmeC">
+                <input type="text" class="text" name="userName" id="userName" placeholder="用户名/邮箱/手机" />
+            </div>
+            <div class="itmeC">
+                <input type="password" class="text" name="password" id="password" placeholder="输入密码" />
+            </div>
+            <div class="itmeC">
+                <a href="javascript:login()" class="redBt" style="display:block; padding:0; height:38px; width:99%; text-align:center; line-height:38px;">登录</a>
+            </div>
+            <div class="table" style="padding-top:10px;">
+                <div class="cell" style=" width:50%;"><a href="">免费注册</a></div>
+                <div class="cell" style="width:50%; text-align:right;"><a href="">找回密码</a></div>
+            </div>
+        </form>
+        <div class="otherLogin table">
+            <p>其他登录方式</p>
+            <div class="table">
+            </div>
+        </div>
+    </div>
+    <div class="new-brn-tab" id="nav" style="display: block;position: absolute;bottom: 0;width: 100%;">
+        <div class="new-tbl-type"> 
+            <a href="" class="new-tbl-cell"><span class="icon">首页</span><p style="color:#6e6e6e;">首页</p></a> 
+            <a href="" class="new-tbl-cell"><span class="icon2 on">分类搜索</span><p style="color:#6e6e6e;" class="on">分类搜索</p></a> 
+            <a href="" class="new-tbl-cell"><span class="icon3">购物车</span><p style="color:#6e6e6e;">购物车</p></a> 
+            <a href="" class="new-tbl-cell"><span class="icon4 on">个人中心</span><p style="color:#6e6e6e;" class="on">个人中心</p></a> 
+        </div>
+    </div>
+</body>
+</html>
