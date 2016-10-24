@@ -1,19 +1,18 @@
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="utf-8">
-	<title>列表触屏版</title>
+	<title>详情触屏版</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link href="css/base.css" rel="stylesheet" type="text/css">
-	<link href="css/list.css" rel="stylesheet" type="text/css">
 	<link href="css/content.css" rel="stylesheet" type="text/css">
 	<script src="scripts/jquery.js" type="text/javascript"></script>
 	<script src="scripts/common.js" type="text/javascript"></script>
+	<script src="scripts/product.js" type="text/javascript"></script>
 	<script src="scripts/server/BaseServer.js"></script>
-	<script src="scripts/list.js" type="text/javascript"></script>
+	<script src="scripts/detail.js" type="text/javascript"></script>
 	<style>
 		.btn {
 			width: 50%;
@@ -31,14 +30,11 @@
 			background: #6cb248;
 		}
 		
-		.info {
+		.editDiv .info {
 			border: 1px solid #c8c7cc;
 			margin-top: 10px;
 			margin-bottom: 5px;
 			border-radius: 5px;
-			width: 90%;
-			margin-left:auto;
-			margin-right: auto; 
 		}
 	</style>
 </head>
@@ -46,27 +42,29 @@
 <body>
 	<header>
 		<div class="new-header">
-			<h2>分类列表</h2>
+			<h2>详情</h2>
 		</div>
 	</header>
-	<div class="searchBox">
-		<div class="newSearch">
-			<input type="text" id="keyword" name="sfkeyword" class="new-srch-input" value="" style="color:#999999;">
-			<!--<a href="javascript:document.getElementById('keyword').value=''" target="_self" class="new-s-close"></a><a href="javascript:search(document.getElementById('keyword').value);" target="_self" class="new-s-srch"><span></span></a>-->
-		</div>
-	</div>
-	<div id="content">
-		<div class="proList" id="roleList">
-			<div id="categoryProductListBlock">
+	<div id="content" style="display: show;">
+		<div class="h15"></div>
+		<div class="conBox">
+			<div class="info">
+				<span class="text" id="status">22</span>
+			</div>
+			<div class="info">
+				<span class="text" id="type">22</span>
 			</div>
 		</div>
 		<div class="footerBar" id="handlediv">
 			<div>
-				<a href="#" id="add" class="buy">添加</a>
+				<a href="#" id="edit" class="buy">修改</a>
+			</div>
+			<div>
+				<a href="#" id="delete" class="cart">删除</a>
 			</div>
 		</div>
 	</div>
-	<form id="addRole" style="display: none;">
+	<form action="" id="editform" method="POST" style="display:none">
 		<div class="editDiv">
 			<div class="info">
 				<input type="text" name="roleName" id="roleName" class="new-srch-input" />
@@ -74,14 +72,15 @@
 			<div class="info">
 				<input type="text" name="roleType" id="roleType" class="new-srch-input" />
 			</div>
-			<div class="btn">
-				<a type="button" href="#" id="submit" class="cart">提交</a>
-			</div>
-			<div class="btn">
-				<a type="button" href="#" id="return" class="cart">返回</a>
+			<div style="width: 100%;">
+				<div class="btn">
+					<a href="#" id="submit" class="cart">提交</a>
+				</div>
+				<div class="btn">
+					<a href="#" id="return" class="cart">返回</a>
+				</div>
 			</div>
 		</div>
 	</form>
 </body>
-
 </html>
