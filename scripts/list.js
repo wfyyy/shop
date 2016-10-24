@@ -38,7 +38,6 @@ $(function () {
         });
     });
 
-
     $("#add").click(function () {
         $("#content").hide();
         $("#addRole").show();
