@@ -1,5 +1,5 @@
 var BasicServer={
-	ServerUrl: "http://101.200.174.120:81/"
+	ServerUrl: "http://192.168.1.104:8060/api"
 }
 
 function GetQueryString(name) {
